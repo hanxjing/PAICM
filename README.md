@@ -15,13 +15,13 @@ This project is implemented with
 
 The proposed PAICM is verified on the [FashionVC](https://xuemengsong.github.io/) dataset. You can download the origin FashionVC dataset from their provided links (Google Drive Link: https://drive.google.com/open?id=1lO7M-jSWb25yucaW2Jj-9j_c9NqquSVF or Baidu Netdisk Link: https://pan.baidu.com/s/1eS1vNNk with the password: ytu4).
 
-To extract the feature, we provided the item attribute classifier ([checkpoint](https://pan.baidu.com/s/1EbmJIYosNVyQoBk-NNKX_Q) password: k29k) pre-trained on DeepFashion dataset to generate the attribute feature. The feature extraction code is in [fashionVCpredict.py]. The pre-trained attribute classifier can be also used on other fashion datasets.
+To extract the feature, we provided the item attribute classifier ([checkpoint](https://pan.baidu.com/s/1WfmIYVL4fHoc1qme_5YdkQ) password: a49a) pre-trained on [DeepFashion](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html) dataset to generate the attribute feature. The feature extraction code is in [fashionVCpredict.py]. The pre-trained attribute classifier can be also used on other fashion datasets.
 
 To enhance the attribute feature, we also extracted the categoty and color labels from the meta textual and visual data of each item. The extracted categoty and color labels are provided in ./data/. The extraction tools are also provided in ./utils/.
 
 Concat the attribute feature with the categoty and color labels by code [concat_category_color.py], and you can get the final input features.
 
-By the way you can derictly download the final input features from [here]()
+If you don't want to process the above, you can derictly download the final input features from the [Link](https://pan.baidu.com/s/1PPEpxZod4gy60xKHFby2aw) with the password: 24nx.
 
 ### Step by step instructions
 
@@ -47,7 +47,7 @@ If you have derictly downloaded the final input features, you can skip the follo
 
 - python paicm_pytorch.py
 
-We also provided the pre-trained [checkpoint] for test.
+We also provided the pre-trained [checkpoint](https://pan.baidu.com/s/1RL1g5zrWy5S1rZK33HjOvQ) for test with the password: cao3.
 
 ## Citations
 
