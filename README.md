@@ -21,27 +21,21 @@ To enhance the attribute feature, we also extracted the categoty and color label
 
 Concat the attribute feature with the categoty and color labels by code [concat_category_color.py], and you can get the final input features.
 
-If you don't want to process the above, you can derictly download the final input features from the [Link](https://pan.baidu.com/s/1PPEpxZod4gy60xKHFby2aw) with the password: 24nx.
+If you don't want to process the above, you can derictly download the final input features (train_feature.pkl) from the [Link](https://pan.baidu.com/s/1PPEpxZod4gy60xKHFby2aw) with the password: 24nx.
 
 ### Step by step instructions
 
 If you have derictly downloaded the final input features, you can skip the following instructions.
 
-- 1 Download the FashionVC dataset.
+- Download the FashionVC dataset.
 
-- 2 Change the path in the head of the fashionVCpredict.py
+- Change the path in the head of the fashionVCpredict.py
 
-- 3 Extract the attribute feature with instruction: python fashionVCpredict.py
+- Extract the attribute feature with instruction: python fashionVCpredict.py
 
-- 4 Change the path in the head of the concat_category_color.py
+- Change the path in the head of the concat_category_color.py
 
-- 5 Concat all the feature with instruction: python concat_category_color.py
-
-### Data format
-
---data-
-      -
---checkpoints-
+- Concat all the feature with instruction: python concat_category_color.py
 
 ## Running command
 
