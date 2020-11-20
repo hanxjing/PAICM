@@ -13,36 +13,50 @@ This project is implemented with
 
 ## Data Preparation
 
-First, you need to download the origin [FashionVC](https://xuemengsong.github.io/) dataset.
+The proposed PAICM is verified on the [FashionVC](https://xuemengsong.github.io/) dataset. You can download the origin FashionVC dataset from their provided links (Google Drive Link: https://drive.google.com/open?id=1lO7M-jSWb25yucaW2Jj-9j_c9NqquSVF or Baidu Netdisk Link: https://pan.baidu.com/s/1eS1vNNk with the password: ytu4).
 
-(Google Drive Link: https://drive.google.com/open?id=1lO7M-jSWb25yucaW2Jj-9j_c9NqquSVF
-Baidu Netdisk Link: https://pan.baidu.com/s/1eS1vNNk with the password: ytu4)
+To extract the feature, we provided the item attribute classifier ([checkpoint](https://pan.baidu.com/s/1EbmJIYosNVyQoBk-NNKX_Q) password: k29k) pre-trained on DeepFashion dataset to generate the attribute feature. The feature extraction code is in [fashionVCpredict.py]. The pre-trained attribute classifier can be also used on other fashion datasets.
 
-To extract the feature, we provided the item attribute classifier ([checkpoint](https://pan.baidu.com/s/1EbmJIYosNVyQoBk-NNKX_Q) password: k29k) pre-trained on DeepFashion dataset to generate the attribute feature.
+To enhance the attribute feature, we also extracted the categoty and color labels from the meta textual and visual data of each item. The extracted categoty and color labels are provided in ./data/. The extraction tools are also provided in ./utils/.
 
-Then we extracted the categoty and color labels from the meta textual and visual data of each item. The extracted categoty and color labels are provided in ./data/. The extraction tools are also provided in ./utils/.
+Concat the attribute feature with the categoty and color labels by code [concat_category_color.py], and you can get the final input features.
 
-### Instruction
+By the way you can derictly download the final input features from [here]()
 
-python fashionVCpredict.py
+### Step by step instructions
 
-python concat_category_color.py
+If you have derictly downloaded the final input features, you can skip the following instructions.
+
+- 1 Download the FashionVC dataset.
+
+- 2 Change the path in the head of the fashionVCpredict.py
+
+- 3 Extract the attribute feature with instruction: python fashionVCpredict.py
+
+- 4 Change the path in the head of the concat_category_color.py
+
+- 5 Concat all the feature with instruction: python concat_category_color.py
 
 ### Data format
 
+--data-
+      -
+--checkpoints-
 
 ## Running command
 
-CUDA_VISIBLE_DEVICE=0 python main.py
+- python paicm_pytorch.py
+
+We also provided the pre-trained [checkpoint] for test.
 
 ## Citations
 
 ```
-@inproceedings{song2019gp,
-  title={GP-BPR: Personalized Compatibility Modeling for Clothing Matching},
-  author={Song, Xuemeng and Han, Xianjing and Li, Yunkai and Chen, Jingyuan and Xu, Xin-Shun and Nie, Liqiang},
-  booktitle={Proceedings of the 27th ACM International Conference on Multimedia},
-  pages={320--328},
-  year={2019}
+@inproceedings{HanSYWN19,
+  author = {Xianjing Han and Xuemeng Song and Jianhua Yin and Yinglong Wang and Liqiang Nie},
+  title = {Prototype-guided Attribute-wise Interpretable Scheme for Clothing Matching},
+  booktitle = {Proceedings of the international ACM SIGIR Conference on Research and Development in Informaion Retrieval},
+  pages = {785--794},
+  year = {2019}
 }
 ```
