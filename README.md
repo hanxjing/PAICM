@@ -8,12 +8,12 @@ This project is implemented with
 
 - Python 3.8
 
--[Pytorch](pytorch.org) 1.6.0
+- Pytorch 1.6.0
 
 
 ## Data Preparation
 
-First, you need to download the origin [FashionVC](https://xuemengsong.github.io/) data set.
+First, you need to download the origin [FashionVC](https://xuemengsong.github.io/) dataset.
 
 (Google Drive Link: https://drive.google.com/open?id=1lO7M-jSWb25yucaW2Jj-9j_c9NqquSVF
 Baidu Netdisk Link: https://pan.baidu.com/s/1eS1vNNk with the password: ytu4)
@@ -22,21 +22,14 @@ To extract the feature, we provided the item attribute classifier ([checkpoint](
 
 Then we extracted the categoty and color labels from the meta textual and visual data of each item. The extracted categoty and color labels are provided in ./data/. The extraction tools are also provided in ./utils/.
 
-### /instruction
+### Instruction
 
 python fashionVCpredict.py
 
 python concat_category_color.py
 
-### /data
+### Data format
 
-
-
-### Meta data
-
-format: user/outfit/item
-
-Can be download from [there](https://drive.google.com/open?id=1sTfUoNPid9zG_MgV--lWZTBP1XZpmcK8).
 
 ## Running command
 
