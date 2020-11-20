@@ -4,33 +4,33 @@ Code for paper [Prototype-guided Attribute-wise Interpretable Scheme for Clothin
 
 ## Dependencies
 
-This project currently requires the stable version of [Pytorch](pytorch.org) 
+This project is implemented with
 
-- torch 1.0.0
+- Python 3.8
 
-or
+-[Pytorch](pytorch.org) 1.6.0
 
-- torch 1.0.1.post2
-
-you need to run this program using GPU
 
 ## Data Preparation
 
+First, you need to download the origin [FashionVC](https://xuemengsong.github.io/) data set.
+
+(Google Drive Link: https://drive.google.com/open?id=1lO7M-jSWb25yucaW2Jj-9j_c9NqquSVF
+Baidu Netdisk Link: https://pan.baidu.com/s/1eS1vNNk with the password: ytu4)
+
+To extract the feature, we provided the item attribute classifier ([checkpoint](https://pan.baidu.com/s/1EbmJIYosNVyQoBk-NNKX_Q) password: k29k) pre-trained on DeepFashion dataset to generate the attribute feature.
+
+Then we extracted the categoty and color labels from the meta textual and visual data of each item. The extracted categoty and color labels are provided in ./data/. The extraction tools are also provided in ./utils/.
+
+### /instruction
+
+python fashionVCpredict.py
+
+python concat_category_color.py
+
 ### /data
 
-- train(valid/test).scv
 
-format: UserID|TopID|PositiveBottomID|NegativeBottomID
- 
-### /feat
-
-- smallnwjc2vec
-
-- textfeatures
-
-- visualfeatures
-
-Can be download from [there](https://drive.google.com/file/d/1ILz1P4BiyQ0rTwOJD-vqs2J4cF77alUM/view).
 
 ### Meta data
 
