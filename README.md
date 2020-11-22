@@ -13,7 +13,7 @@ This project is implemented with
 
 ## Data Preparation
 
-The proposed PAICM is verified on the [FashionVC](https://xuemengsong.github.io/) dataset. You can download the origin FashionVC dataset from their provided links (Google Drive Link: https://drive.google.com/open?id=1lO7M-jSWb25yucaW2Jj-9j_c9NqquSVF or Baidu Netdisk Link: https://pan.baidu.com/s/1eS1vNNk with the password: ytu4).
+The proposed PAICM is verified on the [FashionVC](https://xuemengsong.github.io/) dataset. You can download the origin FashionVC dataset from their provided links ([Google Drive Link](https://drive.google.com/open?id=1lO7M-jSWb25yucaW2Jj-9j_c9NqquSVF) or [Baidu Netdisk Link](https://pan.baidu.com/s/1eS1vNNk with the password: ytu4)).
 
 To extract the feature, we provided the item attribute classifier ([checkpoint](https://pan.baidu.com/s/1WfmIYVL4fHoc1qme_5YdkQ) password: a49a) pre-trained on [DeepFashion](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html) dataset to generate the attribute feature. The feature extraction code is in [fashionVCpredict.py]. The pre-trained attribute classifier can be also used on other fashion datasets.
 
