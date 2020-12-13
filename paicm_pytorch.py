@@ -73,6 +73,11 @@ class PAICM(nn.Module):
         ik_score = torch.matmul(self.top_emb(i_feature), torch.transpose(self.bottom_emb(k_feature), 0, 1))
         ij_score = torch.diag(ij_score)
         ik_score = torch.diag(ik_score)
+        
+        self.P_nmf.data = torch.relu_(self.P_nmf.data)
+        self.N_nmf.data = torch.relu_(self.N_nmf.data)
+        self.H1_nmf.data = torch.relu_(self.H1_nmf.data)
+        self.H2_nmf.data = torch.relu_(self.H2_nmf.data)
 
         style_ij_score = self.get_style_score(i_feature, j_feature, self.P_nmf)
         style_ik_score = self.get_style_score(i_feature, k_feature, self.N_nmf)
